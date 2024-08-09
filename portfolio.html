@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>----------</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+
+
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a onclick="Func2()" class="nav-link a" data-link="1111111111">1111111111</a></li>
+                <li><a onclick="Func2()" class="nav-link a" data-link="2222222222">2222222222</a></li>
+                <li><a onclick="Func2()" class="nav-link a" data-link="3333333333">3333333333</a></li>
+                <li><a onclick="Func2()" class="nav-link a" data-link="4444444444">4444444444</a></li>
+                <li><a onclick="Func2()" class="nav-link a" data-link="5555555555">5555555555</a></li>
+            </ul>
+            <svg width="0" height="0">
+                <defs>
+                    <clipPath id="moon">
+                        <path d="m27.5,25c-6.904,0-12.5-5.596-12.5-12.5,0-5.76,3.897-10.606,9.196-12.055C22.843.155,21.44,0,20,0,8.954,0,0,8.954,0,20s8.954,20,20,20,20-8.954,20-20c0-1.44-.155-2.843-.445-4.196-1.449,5.3-6.296,9.196-12.055,9.196Z" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </nav>
+
+
+        <label class="switch">
+            <span class="switch__icon switch__icon--light">
+                <span class="switch__icon-part switch__icon-part--1"></span>
+                <span class="switch__icon-part switch__icon-part--2"></span>
+                <span class="switch__icon-part switch__icon-part--3"></span>
+                <span class="switch__icon-part switch__icon-part--4"></span>
+                <span class="switch__icon-part switch__icon-part--5"></span>
+                <span class="switch__icon-part switch__icon-part--6"></span>
+                <span class="switch__icon-part switch__icon-part--7"></span>
+                <span class="switch__icon-part switch__icon-part--8"></span>
+                <span class="switch__icon-part switch__icon-part--9"></span>
+            </span>
+            <input class="switch__input" type="checkbox" role="switch" onclick="Func()" />
+            <span class="switch__icon switch__icon--dark">
+                <span class="switch__icon-part switch__icon-part--1">
+                    <span class="switch__icon-part switch__icon-part--1a"></span>
+                    <span class="switch__icon-part switch__icon-part--1b"></span>
+                </span>
+            </span>
+            <span class="switch__label">Dark Mode</span>
+        </label>
+    </header>
+
+    <div class="sidebarwrapper">
+        <input type="checkbox" class="openSidebarMenu input" id="openSidebarMenu">
+        <label for="openSidebarMenu" class="sidebarIconToggle" onclick="onClick()">
+            <div class="spinner diagonal part-1"></div>
+            <div class="spinner horizontal"></div>
+            <div class="spinner diagonal part-2"></div>
+        </label>
+        <div id="sidebarMenu">
+            <ul class="sidebarMenuInner">
+                <li>Kirill Grigorenko<br>Web Developer<br>
+                </li>
+                <li onclick="Func2()"><a class="nav-link a" data-link="1111111111">1111111111</a></li>
+                <li onclick="Func2()"><a class="nav-link a" data-link="2222222222">2222222222</a></li>
+                <li onclick="Func2()"><a class="nav-link a" data-link="3333333333">3333333333</a></li>
+                <li onclick="Func2()"><a class="nav-link a" data-link="4444444444">4444444444</a></li>
+                <li onclick="Func2()"><a class="nav-link a" data-link="5555555555">5555555555</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="jsfile.js "></script>
+</body>
+
+</html>

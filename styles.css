@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+:root {
+    --speed: 0.25s;
+    --hue: 223;
+    --bg: hsl(var(--hue), 10%, 90%);
+    --fg: hsl(var(--hue), 10%, 10%);
+    --light-sh: hsla(var(--hue), 10%, 95%, 0.5);
+    --dark-sh: hsla(var(--hue), 10%, 15%, 0.4);
+    --primary: hsl(var(--hue), 90%, 50%);
+    --primary-t: hsla(var(--hue), 90%, 50%, 0);
+    --trans-dur: 0.3s;
+}
+
+* {
+    -webkit-touch-callout: none;
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    outline: 0;
+    padding: 0
+}
+
+body {
+    font-family: 'Red Hat Text', sans-serif;
+    overflow-x: hidden;
+    color: var(--fg);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+p {
+    max-width: 52ch;
+    line-height: 1.5;
+    padding: 1em;
+}
+
+.a {
+    display: inline-block;
+    padding: 1em 3.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.3em;
+    font-weight: 700;
+    letter-spacing: .5px;
+    font-size: .875rem;
+    box-shadow: -4px -4px 12px hsla(0, 0%, 100%, .05), 4px 4px 12px black, inset -22px -14px 14px 2px hsla(0, 0%, 100%, 0), inset 8px 4px 20px 12px transparent;
+    cursor: pointer;
+}
+
+.a:hover {
+    box-shadow: -4px -4px 12px hsla(0, 0%, 100%, 0), 4px 4px 12px transparent, inset -22px -14px 14px 2px hsla(0, 0%, 100%, .015), inset 8px 4px 20px 12px rgba(0, 0, 0, .8);
+    transition: 0.1s;
+}
+
+nav {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 25px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1.25rem;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*                                                          button                                                                      */
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+body,
+input {
+    font: 1em/1.5 sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.switch,
+.switch__input {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.switch {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.switch__icon,
+.switch__icon-part {
+    display: block;
+}
+
+.switch__icon {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    transition: filter var(--trans-dur);
+}
+
+.switch__icon-part {
+    background-color: hsla(var(--hue), 10%, 10%, 0.3);
+    position: absolute;
+    transition: background-color var(--trans-dur), box-shadow var(--trans-dur);
+}
+
+.switch__icon--light {
+    filter: drop-shadow(0 0 0.125em hsla(var(--hue), 90%, 70%, 0.2));
+}
+
+.switch__icon--light .switch__icon-part {
+    background-color: hsla(var(--hue), 90%, 70%, 1);
+    border-radius: 0.125em;
+    top: 50%;
+    left: 50%;
+    width: 0.125em;
+    height: 0.2em;
+    transform-origin: 50% 0;
+}
+
+.switch__icon--light .switch__icon-part--1 {
+    border-radius: 50%;
+    box-shadow: 0 0.0625em 0.0625em var(--dark-sh) inset, 0 0.0625em 0.0625em var(--light-sh);
+    top: 0.3em;
+    left: 0.3em;
+    width: 0.4em;
+    height: 0.4em;
+}
+
+.switch__icon--light .switch__icon-part--2 {
+    box-shadow: 0 0.0625em 0.0625em var(--dark-sh) inset, 0 0.0625em 0.0625em var(--light-sh);
+    transform: translateX(-50%) rotate(0) translateY(0.3em);
+}
+
+.switch__icon--light .switch__icon-part--3 {
+    box-shadow: 0.0625em 0.0625em 0.0625em var(--dark-sh) inset, 0.0625em 0.0625em 0.0625em var(--light-sh);
+    transform: translateX(-50%) rotate(45deg) translateY(0.3em);
+}
+
+.switch__icon--light .switch__icon-part--4 {
+    box-shadow: 0.0625em 0 0.0625em var(--dark-sh) inset, 0.0625em 0 0.0625em var(--light-sh);
+    transform: translateX(-50%) rotate(90deg) translateY(0.3em);
+}
+
+.switch__icon--light .switch__icon-part--5 {
+    box-shadow: 0.0625em -0.0625em 0.0625em var(--dark-sh) inset, 0.0625em -0.0625em 0.0625em var(--light-sh);
+    transform: translateX(-50%) rotate(135deg) translateY(0.3em);
+}
+
+.switch__icon--light .switch__icon-part--6 {
+    box-shadow: 0 -0.0625em 0.0625em var(--dark-sh) inset, 0 -0.0625em 0.0625em var(--light-sh);
+    transform: translateX(-50%) rotate(180deg) translateY(0.3em);
+}
+
+.switch__icon--light .switch__icon-part--7 {
+    box-shadow: -0.0625em -0.0625em 0.0625em var(--dark-sh) inset, -0.0625em -0.0625em 0.0625em var(--light-sh);
+    transform: translateX(-50%) rotate(225deg) translateY(0.3em);
+}
+
+.switch__icon--light .switch__icon-part--8 {
+    box-shadow: -0.0625em 0 0.0625em var(--dark-sh) inset, -0.0625em 0 0.0625em var(--light-sh);
+    transform: translateX(-50%) rotate(270deg) translateY(0.3em);
+}
+
+.switch__icon--light .switch__icon-part--9 {
+    box-shadow: -0.0625em 0.0625em 0.0625em var(--dark-sh) inset, -0.0625em 0.0625em 0.0625em var(--light-sh);
+    transform: translateX(-50%) rotate(315deg) translateY(0.3em);
+}
+
+.switch__icon--dark {
+    filter: drop-shadow(0 0 0.125em hsla(var(--hue), 90%, 70%, 0)) drop-shadow(0 0.0625em 0.0625em var(--light-sh));
+}
+
+.switch__icon--dark .switch__icon-part--1 {
+    background-color: transparent;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.switch__icon--dark .switch__icon-part--1a {
+    border-radius: 50%;
+    box-shadow: 0 0.0625em 0.0625em var(--dark-sh) inset;
+    width: 100%;
+    height: 100%;
+}
+
+.switch__icon--dark .switch__icon-part--1b {
+    background-color: transparent;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.switch__icon--dark .switch__icon-part--1b:before {
+    background-color: var(--bg);
+    border-radius: 50%;
+    box-shadow: 0 0.0625em 0.0625em var(--dark-sh), 0 0.0625em 0.0625em var(--light-sh) inset;
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    left: auto;
+    transition: background-color var(--trans-dur);
+    width: 62.5%;
+    height: 62.5%;
+}
+
+.switch__input {
+    background-color: hsla(var(--hue), 10%, 10%, 0.1);
+    border-radius: 0.75em;
+    box-shadow: 0 0.0625em 0.125em var(--dark-sh) inset, 0 0.0625em 0.125em var(--light-sh), 0 0 0 0.125em var(--primary-t);
+    display: block;
+    outline: transparent;
+    position: relative;
+    width: 2.5em;
+    height: 1.5em;
+    transition: box-shadow var(--trans-dur);
+    appearance: none;
+    cursor: pointer;
+}
+
+.switch__input:focus-visible {
+    box-shadow: 0 0.0625em 0.125em var(--dark-sh) inset, 0 0.0625em 0.125em var(--light-sh), 0 0 0 0.125em var(--primary);
+}
+
+.switch__input:before {
+    background-color: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0.0625em 0.125em hsla(var(--hue), 10%, 10%, 0.5);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0.25em;
+    left: 0.25em;
+    width: 1em;
+    height: 1em;
+    transition: background-color var(--trans-dur), box-shadow var(--trans-dur), transform var(--trans-dur) cubic-bezier(0.65, 0.05, 0.34, 1);
+}
+
+.switch__input:checked:before {
+    transform: translateX(1em);
+}
+
+.switch__label {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+}
+
+
+/*                                                          Dark theme                                                  */
+
+body:has(.switch__input:checked) {
+    --bg: hsl(var(--hue), 10%, 15%);
+    --fg: hsl(var(--hue), 10%, 90%);
+    --light-sh: hsla(var(--hue), 10%, 55%, 0.5);
+    --dark-sh: hsla(var(--hue), 10%, 15%, 0.4);
+    --primary: hsl(var(--hue), 90%, 60%);
+}
+
+body:has(.switch__input:checked) .switch__icon--light {
+    filter: drop-shadow(0 0 0.125em hsla(var(--hue), 90%, 75%, 0));
+    color: white;
+}
+
+body:has(.switch__input:checked) .switch__icon--light .switch__icon-part {
+    background-color: hsla(var(--hue), 10%, 10%, 0.3);
+    color: white;
+}
+
+body:has(.switch__input:checked) .switch__icon--dark {
+    filter: drop-shadow(0 0 0.125em hsla(var(--hue), 90%, 75%, 0.6)) drop-shadow(0 0.0625em 0.0625em var(--light-sh));
+    color: white;
+}
+
+body:has(.switch__input:checked) .switch__icon--dark .switch__icon-part--1a {
+    background-color: hsla(var(--hue), 90%, 75%, 1);
+    color: white;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*                                                          gorizontal                                                                  */
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+.sidebarwrapper {
+    display: none;
+    position: absolute;
+    background-color: inherit;
+    height: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 10;
+}
+
+#sidebarMenu {
+    height: 100vh;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    margin-top: 60px;
+    transform: translateX(-100vw);
+    transition: transform 250ms ease-in-out;
+    background: inherit;
+    transition: 1s;
+}
+
+.sidebarMenuInner {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    white-space: nowrap;
+    width: 100vw;
+    background-color: inherit;
+    height: 100vh;
+}
+
+.sidebarMenuInner li {
+    list-style: none;
+    color: inherit;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebarMenuInner li span {
+    display: block;
+    font-size: 14px;
+    color: inherit;
+}
+
+.sidebarMenuInner li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.input[type="checkbox"]:checked~#sidebarMenu {
+    transform: translateX(0);
+    position: fixed;
+}
+
+.body {
+    overflow-y: hidden;
+    height: 100%;
+}
+
+.input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+.input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+.input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+.input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+@media screen and (max-width: 1200px) {
+    .nav-link {
+        width: 100px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    nav {
+        display: none;
+    }
+    .sidebarwrapper {
+        display: block;
+    }
+}
